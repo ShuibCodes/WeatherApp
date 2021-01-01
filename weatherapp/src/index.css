@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+
 html {
   min-height: 100%;
   background-image: url(./assets/warm-bg.jpg);
@@ -5,6 +7,23 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
 
+
+}
+
+.error{
+  height: 200px;
+  position: relative;
+} 
+
+.error-message{
+  font-size: 40px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
@@ -22,23 +41,23 @@ code {
     monospace;
 }
 
-/* 
-.app {
+
+.cold{
   background-image: url('./assets/cold-bg.jpg');
-    background-size: cover;
+   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: 0.4 ease;
+  transition: ease ease ;
 
-} */
+} 
 
-/* .app.warm {
+.warm {
   background-image: url('./assets/warm-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
-} */
+}
 
 main {
   min-height: 100vh;
@@ -49,13 +68,23 @@ main {
 .search-box {
   width: 100%;
   margin: 0 0 75px;
-  margin-top: 2rem;
+  margin-top: 15rem;
+}
+
+.heading{
+  text-align: center;
+  position: relative;
+  top: 1em;
+  font-size: 60px;
+  font-family: 'Arimo', sans-serif
 }
 
 .search-box .search-bar {
   display: block;
-  width: 100%;
+  width: 70rem;
   padding: 15px;
+  margin: 0 auto;
+  
 
   appearance: none;
   background: none;
@@ -78,6 +107,10 @@ main {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
+.location-box{
+  position: relative;
+  top: -3rem;
+}
 .location-box .location {
   color: #FFF;
   font-size: 32px;
@@ -123,3 +156,39 @@ main {
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
+
+@media screen and (max-width: 980px){
+  .search-box .search-bar{
+    width:  30rem;
+  }
+
+  
+
+}
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+        .search-box .search-bar{
+          width: 18rem;
+          margin-left: 37px;
+        }
+
+        .error{
+          margin-top: -5rem;
+
+        }
+        .error-message{
+          white-space: nowrap;
+          font-size: 25px;
+          padding: 30px;
+        }
+
+        .weather-box{
+          margin-top: -5rem;
+          font-size: 70px;
+          padding: 10px;
+        }
+      
+     }
